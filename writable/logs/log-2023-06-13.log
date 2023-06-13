@@ -133,3 +133,137 @@ in APPPATH\Controllers\ApiCaller.php on line 96.
  6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
  7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 03:13:52 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 124)
+ 2 APPPATH\Controllers\ApiCaller.php(124): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(43): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 03:13:59 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 124)
+ 2 APPPATH\Controllers\ApiCaller.php(124): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(43): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 03:14:00 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 124)
+ 2 APPPATH\Controllers\ApiCaller.php(124): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(43): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 03:14:33 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 124)
+ 2 APPPATH\Controllers\ApiCaller.php(124): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(43): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 03:14:34 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 124)
+ 2 APPPATH\Controllers\ApiCaller.php(124): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(43): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 03:14:35 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 124)
+ 2 APPPATH\Controllers\ApiCaller.php(124): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(43): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 03:14:54 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 124)
+ 2 APPPATH\Controllers\ApiCaller.php(124): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(43): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 03:23:45 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 124)
+ 2 APPPATH\Controllers\ApiCaller.php(124): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(43): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 03:23:58 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 124.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 124)
+ 2 APPPATH\Controllers\ApiCaller.php(124): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(43): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 04:01:54 --> Undefined property: stdClass::$users
+in APPPATH\Controllers\ApiCaller.php on line 172.
+ 1 APPPATH\Controllers\ApiCaller.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$users', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 172)
+ 2 APPPATH\Controllers\ApiCaller.php(46): App\Controllers\ApiCaller->fetchRandomImageUrl(Object(App\Models\DataImages))
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 04:43:47 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 140.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 140)
+ 2 APPPATH\Controllers\ApiCaller.php(140): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(40): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 04:59:34 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 127.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 127)
+ 2 APPPATH\Controllers\ApiCaller.php(127): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(42): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 05:00:07 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 128.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 128)
+ 2 APPPATH\Controllers\ApiCaller.php(128): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(42): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 05:00:09 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 128.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 128)
+ 2 APPPATH\Controllers\ApiCaller.php(128): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(42): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 05:01:20 --> file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory
+in APPPATH\Controllers\ApiCaller.php on line 128.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(Kích thước không hợp lệ): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\task06MVC\\app\\Controllers\\ApiCaller.php', 128)
+ 2 APPPATH\Controllers\ApiCaller.php(128): file_get_contents('Kích thước không hợp lệ')
+ 3 APPPATH\Controllers\ApiCaller.php(42): App\Controllers\ApiCaller->outputImageFromUrl('Kích thước không hợp lệ')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\ApiCaller->getImages()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ApiCaller))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

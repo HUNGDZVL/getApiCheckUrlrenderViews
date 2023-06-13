@@ -31,10 +31,11 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->get('getImages/(:num)/(:num)', 'ApiCaller::getImages/$1/$2');
+$routes->get('getImages/(:num)/(:any)/(:num)', 'ApiCaller::getImages/$1/$2/$3');
+$routes->get('getImages/(:num)', 'ApiCaller::getImages/$1');
 $routes->get('getImages', 'ApiCaller::getImages');
 
-$routes->get('demoImg', 'ApiCaller::demoImg');
+$routes->get('indexImg', 'ApiCaller::indexImg');
 
 
 $routes->get('viewSession', 'ApiCaller::viewSession');

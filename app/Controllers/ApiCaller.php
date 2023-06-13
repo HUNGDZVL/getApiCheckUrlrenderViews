@@ -25,24 +25,57 @@ class ApiCaller extends BaseController
             }
         }
 
-
         $id = $this->request->getVar('id'); // Lấy giá trị 'id' từ request
+        $id_img = $this->request->getVar('id_img'); // Lấy giá trị 'id' từ request
         $size = $this->request->getVar('size'); // Lấy giá trị 'size' từ request
 
+        $data = null;
         if ($id !== null) {
             $data = $model->where('id', $id)->first(); // Lấy dữ liệu từ cơ sở dữ liệu với id đã cho
+        } elseif ($id_img !== null) {
+            $data = $model->where('id_img', $id_img)->first(); // Lấy dữ liệu từ cơ sở dữ liệu với id_img đã cho
+        }
 
-            if ($data) {
-                $url = $this->getImageUrlBySize($data, $size); // Lấy URL ảnh dựa trên kích thước từ dữ liệu
-                return $this->outputImageFromUrl($url); // Trả về ảnh từ URL
-            } else {
-                return "Không tìm thấy dữ liệu trong cơ sở dữ liệu";
-            }
+        if ($id === null && $id_img === null) {
+            // Lấy URL ngẫu nhiên với kích thước đã cho
+            $randomUrl = $this->getImageUrlSize($model, $size);
+            return $this->outputImageFromUrl($randomUrl); // Trả về ảnh từ URL ngẫu nhiên
+        }
+
+        if ($data) {
+            $url = $this->getImageUrlBySize($data, $size); // Lấy URL ảnh dựa trên kích thước từ dữ liệu
+            return $this->outputImageFromUrl($url); // Trả về ảnh từ URL
         }
 
         return $this->fetchRandomImageUrl($model); // Lấy ngẫu nhiên một URL ảnh từ API
     }
 
+    //random hình ảnh theo size
+    private function getImageUrlSize($model, $size)
+    {
+        $count = $model->countAll(); // Đếm số lượng bản ghi trong cơ sở dữ liệu
+
+        if ($count > 0) {
+            $randomIndex = mt_rand(1, $count); // Chọn một chỉ mục ngẫu nhiên từ 1 đến số lượng bản ghi
+            $data = $model->find($randomIndex); // Lấy dữ liệu từ cơ sở dữ liệu dựa trên chỉ mục ngẫu nhiên
+
+            // Lấy URL tương ứng với kích thước từ dữ liệu
+            $urls = [
+                $data['urlfull'],
+                $data['urlraw'],
+                $data['urlregular'],
+                $data['urlsmall'],
+                $data['urlthumb']
+            ];
+
+            if ($size >= 1 && $size <= count($urls)) {
+                $sizeUrl = $urls[$size - 1]; // Lấy URL theo kích thước (chỉ mục bắt đầu từ 0)
+                return $sizeUrl;
+            } else {
+                return "Kích thước không hợp lệ";
+            }
+        }
+    }
     /**
      * Lấy URL ảnh dựa trên kích thước
      */
@@ -131,21 +164,33 @@ class ApiCaller extends BaseController
 
             $id_img = $data->id; // Lấy giá trị 'id' từ phản hồi
             $width = $data->width; // Lấy giá trị 'width' từ phản hồi
+            $height = $data->height; // Lấy giá trị 'width' từ phản hồi
+            $description = $data->description; // Lấy giá trị 'width' từ phản hồi
             $urlFull = $data->urls->full; // Lấy giá trị 'full' từ phản hồi
             $urlRaw = $data->urls->raw; // Lấy giá trị 'raw' từ phản hồi
             $urlRegular = $data->urls->regular; // Lấy giá trị 'regular' từ phản hồi
             $urlSmall = $data->urls->small; // Lấy giá trị 'small' từ phản hồi
             $urlThumb = $data->urls->thumb; // Lấy giá trị 'thumb' từ phản hồi
+            $user_id = $data->user->id;
+            $username = $data->user->username;
+            $full_name = $data->user->name;
+            $user_urlprotfolio = $data->user->portfolio_url;
 
             // Thêm dữ liệu vào cơ sở dữ liệu
             $model->insert([
                 'id_img' => $id_img,
                 'width' => $width,
+                'height' => $height,
+                'description' => $description,
                 'urlfull' => $urlFull,
                 'urlraw' => $urlRaw,
                 'urlregular' => $urlRegular,
                 'urlsmall' => $urlSmall,
                 'urlthumb' => $urlThumb,
+                'user_id' => $user_id,
+                'username' => $username,
+                'full_name' => $full_name,
+                'user_urlprotfolio' => $user_urlprotfolio
             ]);
 
             $urls = [
@@ -204,8 +249,8 @@ class ApiCaller extends BaseController
         // In giá trị của session
         echo "Giá trị của session api_call_count: " . $apiCallCount;
     }
-    public function demoImg()
+    public function indexImg()
     {
-        return view('demoImg');
+        return view('index_img');
     }
 }
