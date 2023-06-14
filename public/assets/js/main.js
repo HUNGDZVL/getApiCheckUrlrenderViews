@@ -1,5 +1,5 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+const $s = document.querySelector.bind(document);
+const $s$s = document.querySelectorAll.bind(document);
 // Kiểm tra kích thước màn hình khi tải trang và sau mỗi lần thay đổi kích thước
 window.addEventListener("load", checkScreenSize);
 window.addEventListener("resize", checkScreenSize);
@@ -11,13 +11,14 @@ function start() {
   showmenuWhensroll();
   scrollTopicon();
   handleChickimgMenu();
+  handleClickIconSearch();
 }
 start();
 function handleClickItemMenu(callbackOpenmenu) {
-  const itemMenu = $(".menutable");
+  const itemMenu = $s(".menutable");
   itemMenu.addEventListener("click", () => {
-    const iconmenu = $("#open");
-    const iconmenuarow = $("#close");
+    const iconmenu = $s("#open");
+    const iconmenuarow = $s("#close");
     // tạo hiệu ứng xoay khi click vào menu
     iconmenu.classList.add("rotate-left");
     iconmenuarow.classList.add("rotate-left");
@@ -39,7 +40,7 @@ function handleClickItemMenu(callbackOpenmenu) {
   });
 }
 function OpenMenu(callbackclickshowminimenu) {
-  const blockMenu = $(".nav_menu ");
+  const blockMenu = $s(".nav_menu ");
   const maxWidth = 1023;
   if (window.innerWidth <= maxWidth) {
     if (blockMenu.classList.contains("open")) {
@@ -56,7 +57,7 @@ function OpenMenu(callbackclickshowminimenu) {
 
 function checkScreenSize() {
   const maxWidth = 1023;
-  const blocknavMenu = $(".nav_menu");
+  const blocknavMenu = $s(".nav_menu");
 
   if (window.innerWidth > maxWidth) {
     // Kiểm tra nếu thuộc tính display là 'none' thì đổi thành 'block'
@@ -67,8 +68,8 @@ function checkScreenSize() {
 }
 
 function hadleClickPlusMinus() {
-  const iconplusminus = $$(".plus_minus");
-  const minimenu = $$(".mini_menu > li > a");
+  const iconplusminus = $s$s(".plus_minus");
+  const minimenu = $s$s(".mini_menu > li > a");
   minimenu.forEach((item) => {
     item.onclick = function (e) {
       e.stopPropagation();
@@ -130,7 +131,7 @@ function showmenuWhensroll() {
 }
 
 function scrollTopicon() {
-  const scrollButton = $(".srolltop");
+  const scrollButton = $s(".srolltop");
 
   window.addEventListener("scroll", () => {
     const scrollPercentage =
@@ -149,10 +150,10 @@ function scrollTopicon() {
 }
 
 function handleChickimgMenu() {
-  const imgmenu = $("#nav--option");
-  const footersidebar = $(".footer_sidebar");
-  const iconclose = $("#closenav--js");
-  const footer_ct = $(".footer_ct ");
+  const imgmenu = $s("#nav--option");
+  const footersidebar = $s(".footer_sidebar");
+  const iconclose = $s("#closenav--js");
+  const footer_ct = $s(".footer_ct ");
   imgmenu.onclick = function () {
     footersidebar.classList.remove("closed");
     setTimeout(function () {
@@ -178,4 +179,28 @@ function handleChickimgMenu() {
   footer_ct.onclick = function (e) {
     e.stopPropagation();
   };
+}
+
+function handleClickIconSearch() {
+  const itemSearch = document.querySelector(".header_option_search");
+  itemSearch.addEventListener("click", function () {
+    const blockSearch = document.querySelector(".block_search");
+    blockSearch.style.transform = "translateX(0px)";
+  });
+  closeSearch();
+}
+
+function closeSearch() {
+  const inputSearch = document.querySelector(".block_input");
+  const blockresult = document.querySelector(".block_valueImg");
+  blockresult.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
+  inputSearch.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
+  const blockSearch = document.querySelector(".block_search");
+  blockSearch.addEventListener("click", function () {
+    blockSearch.style.transform = "translateX(100%)";
+  });
 }

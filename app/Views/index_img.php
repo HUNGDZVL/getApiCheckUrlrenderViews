@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galleries</title>
     <link rel="icon" type="image/x-icon" href="/task06MVC/public/assets/img/logo.png" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400, 500, 700&amp;display=swap&amp;subset=vietnamese" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400, 500, 700&amp;display=swap&amp;subset=vietnamese" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-    <link rel="stylesheet" href="/task06MVC/public/assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/task06MVC/public/assets/css/themicon/themify-icons.css" />
+    <link rel="stylesheet" href="/task06MVC/public/assets/css/style.css?v=1.23" />
     <link rel="stylesheet" href="/task06MVC/public/assets/css/grid.css" />
     <link rel="stylesheet" href="/task06MVC/public/assets/css/responsive.css" />
 </head>
@@ -143,61 +144,111 @@
         </div>
         <div class="container">
             <div class="grid wide">
-                <div class="row">
-                    <div class="container_img col l-4 ls-4 m-4">
-                        <div class="container_img--option">
-                            <img src="/task06MVC/public/assets/img/bg1.jpg" alt="" />
-                            <div class="container_option">
-                                <a href="#">PERFECT</a>
-                                <p>Theo Rue Rouji</p>
+
+                <div class="row block_searchImg">
+                    <?php if (!empty($urlimgsearch)) : ?>
+                        <?php for ($i = 0; $i < count($urlimgsearch); $i++) : ?>
+                            <div class="container_img col l-4 ls-4 m-4">
+                                <div class="container_img--option">
+                                    <img src="<?= $urlimgsearch[$i]['url'] ?>" alt="" class="imgSearch" />
+                                    <div class="container_option">
+                                        <a href="#">PERFECT</a>
+                                        <p>Theo Rue Rouji</p>
+                                    </div>
+                                    <div class="dowload_img">
+                                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endfor; ?>
+                    <?php else : ?>
+                        <div class="container_img col l-4 ls-4 m-4">
+                            <div class="container_img--option">
+                                <img src="/task06MVC/public/getImages?id=16&size=2" alt="" class="imgSearch" />
+                                <div class="container_option">
+                                    <a href="#">PERFECT</a>
+                                    <p>Theo Rue Rouji</p>
+                                </div>
+                                <div class="dowload_img">
+                                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="container_img col l-4 ls-4 m-4">
-                        <div class="container_img--option">
-                            <img src="/task06MVC/public/assets/img/bg2.jpg" alt="" />
-                            <div class="container_option">
-                                <a href="#">NEW DAY</a>
-                                <p>Theo Rue Rouji</p>
+                        <div class="container_img col l-4 ls-4 m-4">
+                            <div class="container_img--option">
+                                <img src="/task06MVC/public/getImages?id=15&size=2" alt="" class="imgSearch" />
+                                <div class="container_option">
+                                    <a href="#">NEW DAY</a>
+                                    <p>Theo Rue Rouji</p>
+                                </div>
+                                <div class="dowload_img">
+                                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="container_img col l-4 ls-4 m-4">
-                        <div class="container_img--option">
-                            <img src="/task06MVC/public/assets/img/bg3.jpg" alt="" />
-                            <div class="container_option">
-                                <a href="#">HAPPY DAY</a>
-                                <p>Theo Rue Rouji</p>
+                        <div class="container_img col l-4 ls-4 m-4">
+                            <div class="container_img--option">
+                                <img src="/task06MVC/public/getImages?id=2&size=2" alt="" class="imgSearch" />
+                                <div class="container_option">
+                                    <a href="#">HAPPY DAY</a>
+                                    <p>Theo Rue Rouji</p>
+                                </div>
+                                <div class="dowload_img">
+                                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="container_img col l-4 ls-4 m-4">
+                            <div class="container_img--option">
+                                <img src="/task06MVC/public/getImages?id=19&size=2" alt="" class="imgSearch" />
+                                <div class="container_option">
+                                    <a href="#">NATURE</a>
+                                    <p>Theo Rue Rouji</p>
+                                </div>
+                                <div class="dowload_img">
+                                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container_img col l-4 ls-4 m-4">
+                            <div class="container_img--option">
+                                <img src="/task06MVC/public/getImages?id=18&size=2" alt="" class="imgSearch" />
+                                <div class="container_option">
+                                    <a href="#">MORNING</a>
+                                    <p>Theo Rue Rouji</p>
+                                </div>
+                                <div class="dowload_img">
+                                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container_img col l-4 ls-4 m-4">
+                            <div class="container_img--option">
+                                <img src="/task06MVC/public/getImages?id=6&size=2" alt="" class="imgSearch" />
+                                <div class="container_option">
+                                    <a href="#">PHOTOGRAPHY</a>
+                                    <p>Theo Rue Rouji</p>
+                                </div>
+                                <div class="dowload_img">
+                                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                 </div>
-                <div class="row">
-                    <div class="container_img col l-4 ls-4 m-4">
-                        <div class="container_img--option">
-                            <img src="/task06MVC/public/assets/img/bg4.jpg" alt="" />
-                            <div class="container_option">
-                                <a href="#">NATURE</a>
-                                <p>Theo Rue Rouji</p>
-                            </div>
+                <div class="row nextandprepage closed">
+                    <div class="btn_control">
+                        <div class="controll_page">
+                            <i class="ti-angle-left pre "></i>
+                            <button class="currentPage">Page 1</button>
+                            <i class="ti-angle-right next"></i>
+
                         </div>
-                    </div>
-                    <div class="container_img col l-4 ls-4 m-4">
-                        <div class="container_img--option">
-                            <img src="/task06MVC/public/assets/img/bg5.jpg" alt="" />
-                            <div class="container_option">
-                                <a href="#">MORNING</a>
-                                <p>Theo Rue Rouji</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container_img col l-4 ls-4 m-4">
-                        <div class="container_img--option">
-                            <img src="/task06MVC/public/assets/img/bg6.jpg" alt="" />
-                            <div class="container_option">
-                                <a href="#">PHOTOGRAPHY</a>
-                                <p>Theo Rue Rouji</p>
-                            </div>
+                        <div class="controll_page">
+                            <i class="ti-angle-left derPage "></i>
+                            <button class="currentNumImage">6 Image</button>
+                            <i class="ti-angle-right inrPage"></i>
+
                         </div>
                     </div>
                 </div>
@@ -313,8 +364,8 @@
                                 <p class="content" style="color: #212529; font-weight: 600">
                                     DON'T MISS
                                 </p>
-                                <div class="footer_sidebar--option">
-                                    <img src="/task06MVC/public/assets/img/600.jpg" alt="" />
+                                <div class="footer_sidebar--option imgopmini">
+                                    <img src="/task06MVC/public/getImages?id=7&size=2" alt="" />
                                     <p>
                                         Sexy Clutches: How to Buy <br />
                                         &amp; Wear a Designer Clutch...<content style="
@@ -326,8 +377,8 @@
                                     </p>
                                 </div>
 
-                                <div class="footer_sidebar--option">
-                                    <img src="/task06MVC/public/assets/img/600.jpg" alt="" />
+                                <div class="footer_sidebar--option imgopmini">
+                                    <img src="/task06MVC/public/getImages?id=8&size=2" alt="" />
                                     <p>
                                         4 Expert Tips On How To <br />
                                         Choose The Right Men’s Wallet<content style="
@@ -338,8 +389,8 @@
                         ">TH02 20, 2023 . 927 VIEWS</content>
                                     </p>
                                 </div>
-                                <div class="footer_sidebar--option">
-                                    <img src="/task06MVC/public/assets/img/600.jpg" alt="" />
+                                <div class="footer_sidebar--option imgopmini">
+                                    <img src="/task06MVC/public/getImages?id=9&size=2" alt="" />
                                     <p>
                                         Unlock The Secrets Of Selling <br />
                                         High Ticket Items<content style="
@@ -351,19 +402,33 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="footer_sidebar--item">
+                            <div class="footer_sidebar--item imgfooter_op">
                                 <p class="content" style="color: #212529; font-weight: 600">
                                     ADVERTISE BANNER
                                 </p>
-                                <img src="/task06MVC/public/assets/img/432.jpg" alt="" class="imgfn" />
+                                <img src="/task06MVC/public/getImages?id=14&size=2" alt="" class="imgfn" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="block_search">
+            <div class="item_search">
+                <div class="block_input">
+                    <label for="" id="find">Tìm kiếm</label>
+                    <input id="search_img" type="text" placeholder="Tìm kiếm hình ảnh">
+                </div>
+                <div class="block_valueImg">
+
+
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="/task06MVC/public/assets/js/main.js"></script>
+
+    <script src="/task06MVC/public/assets/js/main.js?v=1.11"></script>
+    <script src="/task06MVC/public/assets/js/search.js?v=1.16"></script>
 </body>
 
 </html>

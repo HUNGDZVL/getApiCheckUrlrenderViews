@@ -19,6 +19,7 @@ class ApiCaller extends BaseController
             // Vượt quá giới hạn số lần gọi API, thay thế bằng lấy một URL ngẫu nhiên từ cơ sở dữ liệu
             $randomUrl = $this->getRandomImageUrlFromDatabase($model);
             if ($randomUrl) {
+                // đổi url thành hình ảnh
                 return $this->outputImageFromUrl($randomUrl);
             } else {
                 return "Không tìm thấy dữ liệu trong cơ sở dữ liệu";
@@ -30,22 +31,23 @@ class ApiCaller extends BaseController
         $size = $this->request->getVar('size'); // Lấy giá trị 'size' từ request
 
         $data = null;
-        if ($id !== null) {
-            $data = $model->where('id', $id)->first(); // Lấy dữ liệu từ cơ sở dữ liệu với id đã cho
-        } elseif ($id_img !== null) {
-            $data = $model->where('id_img', $id_img)->first(); // Lấy dữ liệu từ cơ sở dữ liệu với id_img đã cho
+        if ($id !== null) { // check param id nếu id tồn tại lấy ra url theo id
+            $data = $model->where('id', $id)->first();
+        } elseif ($id_img !== null) { //check param id_img nếu tồn tại thì lấy theo id_img
+            $data = $model->where('id_img', $id_img)->first();
         }
 
-        if ($id === null && $id_img === null) {
+        if ($size !== null && $id == null && $id_img == null) { // check param size nếu k tồn tại id bất kì
             // Lấy URL ngẫu nhiên với kích thước đã cho
             $randomUrl = $this->getImageUrlSize($model, $size);
-            return $this->outputImageFromUrl($randomUrl); // Trả về ảnh từ URL ngẫu nhiên
+            return $this->outputImageFromUrl($randomUrl);
         }
 
-        if ($data) {
-            $url = $this->getImageUrlBySize($data, $size); // Lấy URL ảnh dựa trên kích thước từ dữ liệu
-            return $this->outputImageFromUrl($url); // Trả về ảnh từ URL
+        if ($data) { // nếu biến data tồn tại thì gọi hàm lấy url theo size
+            $url = $this->getImageUrlBySize($data, $size);
+            return $this->outputImageFromUrl($url);
         }
+
 
         return $this->fetchRandomImageUrl($model); // Lấy ngẫu nhiên một URL ảnh từ API
     }
@@ -81,11 +83,11 @@ class ApiCaller extends BaseController
      */
     private function getImageUrlBySize($data, $size)
     {
-        if (
+        if ( // nếu như size khác null và có giá trị từ 1 tới 5 
             $size !== null && $size >= 1 && $size <= 5
         ) {
             $url = '';
-
+            // lấy url theo case từ 1 tới 5 tương ứng với trong db
             switch ($size) {
                 case 1:
                     $url = $data['urlraw'];
@@ -103,7 +105,7 @@ class ApiCaller extends BaseController
                     $url = $data['urlfull'];
                     break;
             }
-        } else {
+        } else { // neu như size k tồn tại hoăc vượt quá giá trị yêu cầu thì sẽ random url bất kì
             $urls = [
                 $data['urlraw'],
                 $data['urlregular'],
@@ -111,8 +113,8 @@ class ApiCaller extends BaseController
                 $data['urlthumb'],
                 $data['urlfull']
             ];
-            $randomIndex = array_rand($urls); // Chọn ngẫu nhiên một chỉ mục từ mảng
-            $url = $urls[$randomIndex]; // Lấy URL ngẫu nhiên từ mảng
+            $randomIndex = array_rand($urls); // Chọn ngẫu nhiên một chỉ mục từ mảng (0-4)
+            $url = $urls[$randomIndex]; // Lấy URL ngẫu nhiên từ mảng có vị trí random
         }
 
         return $this->outputImageFromUrl($url);
@@ -144,10 +146,7 @@ class ApiCaller extends BaseController
         //     exit(); // hoặc die()
         // }
 
-        // $finfo = finfo_open(FILEINFO_MIME_TYPE); // trả về kiểu MIME dựa trên phần mở rộng của tệp
-        // echo finfo_file($finfo, $filename) . "\n"; // in ra kiểu MIME của tệp
-        // finfo_close($finfo); // đóng đối tượng finfo
-        // echo exif_imagetype($filename); // xác định kiểu hình ảnh sử dụng exif_imagetype
+
         // return; // kết thúc hàm
     }
 
@@ -248,9 +247,5 @@ class ApiCaller extends BaseController
 
         // In giá trị của session
         echo "Giá trị của session api_call_count: " . $apiCallCount;
-    }
-    public function indexImg()
-    {
-        return view('index_img');
     }
 }

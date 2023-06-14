@@ -34,11 +34,12 @@ $routes->get('/', 'Home::index');
 $routes->get('getImages/(:num)/(:any)/(:num)', 'ApiCaller::getImages/$1/$2/$3');
 $routes->get('getImages/(:num)', 'ApiCaller::getImages/$1');
 $routes->get('getImages', 'ApiCaller::getImages');
-
-$routes->get('indexImg', 'ApiCaller::indexImg');
-
-
 $routes->get('viewSession', 'ApiCaller::viewSession');
+
+$routes->get('indexImg', 'GetImagesDB::indexImg');
+$routes->post('getDataSearch', 'GetImagesDB::getDataSearch');
+
+
 
 /*
  * --------------------------------------------------------------------
